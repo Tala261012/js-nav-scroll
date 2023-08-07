@@ -35,11 +35,11 @@ class Nav {
   //TODO тут мы по-другому привязываем функции к тегам, чем в js-calc
   //* bind(this) нужно использовать, если методы выше не стрелочные!!! (т е тут это не нужно), например window.go.onclick = this.#go.bind(this)
   static init = () => {
-    window.back.onclick = this.#back
-    window.forward.onclick = this.#forward
-    window.reload.onclick = this.#reload
-    window.home.onclick = this.#home
-    window.go.onclick = this.#go
+    window.back.onclick = this.#back.bind(this)
+    window.forward.onclick = this.#forward.bind(this)
+    window.reload.onclick = this.#reload.bind(this)
+    window.home.onclick = this.#home.bind(this)
+    window.go.onclick = this.#go.bind(this)
 
     window.input.value = location.href
   }
